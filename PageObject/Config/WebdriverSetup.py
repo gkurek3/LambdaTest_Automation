@@ -2,24 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 
-# def webdriver_setup():
-#     chrome_options = Options()
-#     chrome_options.add_experimental_option("detach", True)
-#     driver = webdriver.Chrome(options=chrome_options)
-#
-#     driver.get("https://www.lambdatest.com/")
-#     driver.maximize_window()
-#     return driver
-
 class WebdriverSetup:
-    def __init__(self, driver):
-        self.driver = driver
+    def __init__(self):
+        self.driver = self.webdriver_setup()
 
-    def webdriver_setup(self):
+    @staticmethod
+    def webdriver_setup():
         chrome_options = Options()
         chrome_options.add_experimental_option("detach", True)
         driver = webdriver.Chrome(options=chrome_options)
 
         driver.get("https://www.lambdatest.com/")
         driver.maximize_window()
-        return self.driver
+        return driver

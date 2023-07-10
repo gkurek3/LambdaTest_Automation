@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By
-from PageObject.Locators import LTLocatorLoginPage
+from PageObject.Locators.Locator_Login_Page import LTLocatorLoginPage
 
 
-class LTLogin(object):
+class LTLogin:
 
     def __init__(self, driver):
 

@@ -1,7 +1,7 @@
-from PageObject.Pages.LT_HomePage import LTHomePage
+from PageObject.Pages.HomePage import LTHomePage
 from PageObject.Config.WebdriverSetup import WebdriverSetup
 
-driver = WebdriverSetup.webdriver_setup()
+driver = WebdriverSetup().webdriver_setup()
 
 
 class TestLTHomepage:
