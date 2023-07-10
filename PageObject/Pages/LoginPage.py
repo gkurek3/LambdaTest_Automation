@@ -5,18 +5,16 @@ from PageObject.Locators.Locator_Login_Page import LTLocatorLoginPage
 class LTLogin:
 
     def __init__(self, driver):
-
         self.driver = driver
 
-        self.lt_login_user_name = driver.find_element(By.XPATH, LTLocatorLoginPage.email_field)
-        self.lt_login_password = driver.find_element(By.XPATH, LTLocatorLoginPage.password_field)
-        self.lt_login_button = driver.find_element(By.XPATH, LTLocatorLoginPage.login_button)
+    def set_username(self, user_name):
+        username_input = self.driver.find_element(By.XPATH, LTLocatorLoginPage.email_field)
+        username_input.send_keys(user_name)
 
-    def get_lt_username(self):
-        return self.lt_login_user_name
+    def set_password(self, password):
+        password_input = self.driver.find_element(By.XPATH, LTLocatorLoginPage.password_field)
+        password_input.send_keys(password)
 
-    def get_lt_password(self):
-        return self.lt_login_password
-
-    def get_lt_login_button(self):
-        return self.lt_login_button
+    def click_login_button(self):
+        button = self.driver.find_element(By.XPATH, LTLocatorLoginPage.login_button)
+        button.click()
