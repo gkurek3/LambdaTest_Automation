@@ -1,10 +1,10 @@
 import time
 
-from PageObject.Pages.LT_LoginPage import LTLogin
-from PageObject.Pages.LT_HomePage import LTHomePage
-from PageObject.Config.WebdriverSetup import webdriver_setup
+from PageObject.Pages.LoginPage import LTLogin
+from PageObject.Pages.HomePage import LTHomePage
+from PageObject.Config.WebdriverSetup import WebdriverSetup
 
-driver = webdriver_setup()
+driver = WebdriverSetup().webdriver_setup()
 
 
 class TestLTLoginPage:
@@ -18,7 +18,7 @@ class TestLTLoginPage:
         else:
             print("Failed to load")
 
-    time.sleep(5)
+    time.sleep(3)
 
     def test_login_user(self):
         lt_login_page_object = LTLogin(driver)
