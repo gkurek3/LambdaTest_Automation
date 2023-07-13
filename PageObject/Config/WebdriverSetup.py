@@ -3,9 +3,6 @@ from selenium.webdriver.chrome.options import Options
 
 
 class WebdriverSetup:
-    def __init__(self):
-        self.driver = self.webdriver_setup()
-
     @staticmethod
     def webdriver_setup():
         chrome_options = Options()
