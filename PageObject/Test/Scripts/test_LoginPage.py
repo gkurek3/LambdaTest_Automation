@@ -37,3 +37,8 @@ class TestLTLoginPageClass:
         WebDriverWait(self.driver, 10).until(EC.title_is("Welcome - LambdaTest"))
         print("User logged in successfully")
         assert self.driver.title == "Welcome - LambdaTest"
+
+    def test_fail_login_user(self):
+        self.handle_login_page.handle_login(username="abc@gmail.com")  # wrong login credentials
+        print("User failed to login")
+        assert self.driver.title == "Log in"
