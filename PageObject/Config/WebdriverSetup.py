@@ -10,7 +10,7 @@ class WebdriverSetup:
         chrome_options = Options()
         chrome_options.add_experimental_option("detach", True)
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
-
+        driver.implicitly_wait(10)
         driver.get("https://www.lambdatest.com/")
         driver.maximize_window()
         return driver

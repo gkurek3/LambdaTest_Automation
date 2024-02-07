@@ -1,4 +1,4 @@
-class LTLocatorHomePage(object):
+class LTLocatorHomePage:
 
     # Locators for HomePage
     login_link = "//a[normalize-space()='Login']"
