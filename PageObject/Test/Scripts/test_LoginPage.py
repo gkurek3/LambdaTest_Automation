@@ -23,8 +23,6 @@ class TestLTLoginPage(unittest.TestCase):
         else:
             print("Failed to load")
 
-    time.sleep(3)
-
     def test_login_user(self):
         self.lt_home_page_object.get_lt_login_link().click()
         self.lt_login_page_object.set_username("gkurek3@gmail.com")
