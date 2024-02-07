@@ -4,13 +4,14 @@ import unittest
 from PageObject.Pages.LoginPage import LTLogin
 from PageObject.Pages.HomePage import LTHomePage
 from PageObject.Config.WebdriverSetup import WebdriverSetup
+from PageObject.Config.WebdriverSetupEdge import WebdriverSetupEdge
 
 
 class TestLTLoginPage(unittest.TestCase):
 
     def setUp(self):
         super().setUp()
-        self.driver = WebdriverSetup().webdriver_setup()
+        self.driver = WebdriverSetupEdge().webdriver_setup()
         self.lt_home_page_object = LTHomePage(self.driver)
         self.lt_login_page_object = LTLogin(self.driver)
 

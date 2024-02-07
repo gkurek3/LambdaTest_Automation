@@ -1,5 +1,6 @@
 from PageObject.Pages.HomePage import LTHomePage
 from PageObject.Config.WebdriverSetup import WebdriverSetup
+from PageObject.Config.WebdriverSetupEdge import WebdriverSetupEdge
 import unittest
 
 
