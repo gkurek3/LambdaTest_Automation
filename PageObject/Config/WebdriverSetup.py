@@ -5,9 +5,10 @@ from selenium.webdriver.chrome.options import Options
 class WebdriverSetup:
     @staticmethod
     def webdriver_setup():
-        chrome_options = Options()
-        chrome_options.add_experimental_option("detach", True)
-        driver = webdriver.Chrome(options=chrome_options)
+        # chrome_options = Options()
+        # chrome_options.add_experimental_option("detach", True)
+        # driver = webdriver.Chrome(options=chrome_options)
+        driver = webdriver.Firefox()
 
         driver.get("https://www.lambdatest.com/")
         driver.maximize_window()

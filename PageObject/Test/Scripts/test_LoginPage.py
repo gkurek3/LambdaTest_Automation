@@ -41,5 +41,6 @@ class TestLTLoginPage(unittest.TestCase):
         self.driver.quit()
         del self.driver
 
+
 if __name__ == '__main__':
     unittest.main()

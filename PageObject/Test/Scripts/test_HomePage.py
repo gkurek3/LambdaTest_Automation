@@ -2,6 +2,7 @@ from PageObject.Pages.HomePage import LTHomePage
 from PageObject.Config.WebdriverSetup import WebdriverSetup
 import unittest
 
+
 class TestLTHomepage(unittest.TestCase):
     def setUp(self):
         super().setUp()
